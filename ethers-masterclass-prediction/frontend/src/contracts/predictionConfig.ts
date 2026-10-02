@@ -1,5 +1,7 @@
+import { predictionMarketOracleHubabi } from "../constants";
 // PredictionMarketOracleHub ABI & Addresses
-export const PREDICTION_HUB_ADDRESS = "0x2b76e3270698c75c2f1bc46C6190Fb5565ED278b";
+export const PREDICTION_HUB_ADDRESS =
+  "0x2b76e3270698c75c2f1bc46C6190Fb5565ED278b";
 
 export const PREDICTION_HUB_ABI = [
   "function nextMarketId() view returns (uint256)",
@@ -14,5 +16,12 @@ export const PREDICTION_HUB_ABI = [
   "event MarketCreated(uint256 indexed marketId, string title, string category, uint256 endTime)",
   "event BetPlaced(uint256 indexed marketId, address indexed user, bool isYes, uint256 amount)",
   "event MarketResolved(uint256 indexed marketId, uint8 outcome)",
-  "event WinningsClaimed(uint256 indexed marketId, address indexed user, uint256 amount)"
+  "event WinningsClaimed(uint256 indexed marketId, address indexed user, uint256 amount)",
 ];
+
+export const CONTRACTS = {
+  predictionMarketOracleHub: {
+    address: PREDICTION_HUB_ADDRESS,
+    abi: predictionMarketOracleHubabi,
+  },
+};
